@@ -1,0 +1,68 @@
+/* style sheet for Crystals game */
+
+*{
+    background:white;
+    font:14pt;
+    font-family:Arial, Helvetica Neue, Helvetica, sans-serif;  
+    
+}    
+
+}
+/* place a border around the class box */
+.box{
+    display: block;
+    border: solid 1pt gray;
+    text-align:center;  
+}
+
+/* title box */
+.row1 {
+    display: block;
+    padding-left: 14 pts;
+    padding-right: 14 pts;
+    background: lightgray;
+    border: solid 1pt gray;
+}
+
+/* background for the title box */
+#title {
+    background:lightgray;
+    text-align:center;
+    border: solid 1pt gray;
+}
+
+/* row 4 wins and losses */
+.row4{
+    display: block;
+    padding-left: 14pts;
+    padding-right: 14pts;
+    text-align: center;
+    border: solid 1pt gray;
+}
+
+/* background on row 3 columns */
+
+.row3 {
+    display:block;
+    background: lightgray;
+    text-align:center;
+    border: solid 1pt gray;
+    height: 30pt;
+
+}
+.row31 {
+    display: block;
+    background: lightgray;
+    text-align:center;
+    border: solid 1pt gray;
+    height: 160pt;
+
+}
+.row32 {
+    display:block;
+    background: lightgray;
+    text-align:center;
+    border: solid 1pt gray;
+    height: 30pt;
+    
+}

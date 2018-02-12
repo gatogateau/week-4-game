@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crystals Collector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = "stylesheet" type="text/css" media="screen" href="assets/css/reset.css"/>
+    <link rel = "stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+  
+    <!-- <script src="assets/javascript/game.js"></script> -->
+</head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <div class = "header box row row1">
+        <div class="col md 12">
+            <h1 id="title">Crystals Collector</h1>
+            <h3 class="winLoss"></h3>
+        </div>    
+    </div>
+
+    <div class="row gems box row2">
+        <div class="col md 12">
+            <button class="diamond"><img class="gemStyle" src = "assets/images/diamond.png" alt="diamond" height= 200pt width=200pt></button>
+            <button class="emerald"><img class="gemStyle" src = "assets/images/emerald.jpeg" alt="emerald"height= 200pt width=200pt></button>
+            <button class="ruby"><img class="gemStyle" src = "assets/images/ruby.png" alt="ruby"height= 200pt width=200pt></button>
+            <button class="saphire"><img class="gemStyle" src = "assets/images/saphire.jpeg" alt="saphire"height= 200pt width=200pt></button>
+        </div>    
+    </div>
+
+    <div class="row3 row box">
+
+        
+        <div class= "col-md-6 compNum box row31">
+            <button class="numNum"><h3 class="row32 compGenerated"><center> Number</center></h3></button>
+            <p><span class="computerGen"></span></p>
+
+        </div>
+
+        <div class="col-md-6 totScore box row31">
+            <h3 class="score row32"><center>Your Total score: </center></h3>
+        </div>
+    </div>
+
+    <div class="row row4 wL box">
+        <p><h3>Wins : <span id="playerWin"></span></h3></p>
+        <p><h3>Losses: <span id="playerLoss"></span></h3></p>
+
+    </div>
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+		$(document).ready(function () {
+
+
+            // random number for computer generated  
+// tag with computerGen class random number for computer generated:
+            var random= (Math.floor((Math.random()*101)+19));
+            var targetN= random;
+            var randomCrystal = (Math.floor((Math.random()*12)+1));
+            var counter=0;
+            $(".computerGen").text(random);
+
+
+
+      
+
+// Diamond button click on button, assign a value to the button
+// HOW DO I SET THE BUTTON TO THE NUMBER without it changing
+
+            $(".diamond").on("click" , function (){
+                
+                var randomCrystal = (Math.floor((Math.random()*12)+1));
+                $(".diamond").text(randomCrystal);
+                console.log (randomCrystal);
+                
+                // diamond.attr("data-gemValue", randomCrystal);
+
+			    // var gemValue = ($(this).attr("data-gemValue"));
+
+                // // make number and integer
+                // gemValue = parseInt(crystalValue, 10);
+                // counter += gemValue;
+
+
+            });
+// emerald button click on button, assign a value to the button
+            $(".emerald").on("click" , function (){
+                
+                var randomCrystal = (Math.floor((Math.random()*12)+1));
+                $(".emerald").text(randomCrystal);
+                console.log (randomCrystal);
+                
+
+
+
+            });
+
+// ruby button click on button, assign a value to the button
+            $(".ruby").on("click" , function (){
+                
+                var randomCrystal = (Math.floor((Math.random()*12)+1));
+                $(".ruby").text(randomCrystal);
+                console.log (randomCrystal);
+                
+
+
+
+            });
+// saphire button click on button, assign a value to the button
+            $(".saphire").on("click" , function (){
+                
+                var randomCrystal = (Math.floor((Math.random()*12)+1));
+                $(".saphire").text(randomCrystal);
+                console.log (randomCrystal);
+                
+
+
+            });
+
+// win or lose
+
+            counter += randomCrystal;
+            console.log (counter); 
+
+            var win;
+            var loss;
+            if (counter === targetN) {
+                $("totalScore").text("You win!");
+                win++
+				alert ('you win');
+			}
+
+			else if (counter >= targetN) {
+                $("totalScore").text("You lose!!");
+                loss++
+				alert ("you didn't win");
+			}
+
+            $("#playerWin").append(win);
+
+            $("#playerLose").append(loss);
+            
+
+     });
+     </script>       
+<body>
+    
+</body>
+</html>
